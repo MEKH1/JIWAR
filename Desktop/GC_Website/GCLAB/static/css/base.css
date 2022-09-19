@@ -1,0 +1,373 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+  
+
+  }
+.card{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+
+}
+
+.logonav{
+width: 150px;
+}
+
+.navbar{
+background-color: #DDDBDE;
+}
+
+.navbaritems
+{   
+color: #916F99;
+margin-top: 10px;
+font-size: x-large;
+}
+
+
+.navbaritems:hover
+{
+color: #3F6DA2;
+}
+
+.navbaritems:active {
+color: #3F6DA2 !important;
+}
+
+
+.navicon
+{
+    color: #916F99;
+    font-size: x-large;
+
+}
+
+
+
+.card
+{
+    margin: 50px;
+    color: #916F99;
+
+}
+
+
+.cardimg{
+    height: 70%;
+    width: 50%;
+    object-fit: contain;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.cardimghome{
+    height: 70%;
+    width: 50%;
+    object-fit: contain;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.cardimghomehealthinsurance{
+
+    height: 70%;
+    width: 100%;
+    object-fit: contain;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.checkup{
+    color: #3F6DA2;
+
+}
+
+footer{
+    background-color: #DDDBDE;
+   
+}
+
+.logofooter{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footertext{
+    color: #916F99;
+
+}
+
+
+.footericon{
+
+    font-size: xx-large;
+    color: #916F99;
+
+}
+
+.carousel .item {
+    height: 500px;
+  }
+  
+  .item img {
+      position: absolute;
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+  }
+ 
+.carousel-caption5 {
+    position: absolute;
+    right: 4%;
+    bottom: 4rem;
+    left: 9%;
+    padding-top: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    width: 50%;
+    color: #ffffff;
+    background-color: #916f99a5;
+    
+    text-align: center;
+
+  }
+  
+  .caption-text{
+    position: relative;
+    bottom: 2rem;
+
+  }
+
+  .vertical.carousel .carousel-item {
+    overflow: hidden;
+}
+
+.vertical.carousel .carousel-item-next:not(.carousel-item-start),
+.vertical.carousel .active.carousel-item-end {
+    transform: translateY(100%);
+}
+
+.vertical.carousel .carousel-item-prev:not(.carousel-item-end),
+.vertical.carousel .active.carousel-item-start {
+    transform: translateY(-100%);
+}
+
+.vertical.carousel .carousel-indicators {
+    top: 0;
+    left: unset;
+
+    margin-left: unset !important;
+    margin-right: 1rem;
+
+    flex-direction: column;
+}
+
+.vertical.carousel .carousel-indicators [data-bs-target] {
+    height: 30px;
+    width: 3px;
+}
+
+.vertical.carousel .carousel-control-prev,
+.vertical.carousel .carousel-control-next {
+    width: 100%;
+    height: 60px;
+}
+
+.vertical.carousel .carousel-control-prev-icon,
+.vertical.carousel .carousel-control-next-icon {
+    transform: rotateZ(90deg);
+}
+
+.vertical.carousel .carousel-control-next {
+    top: unset;
+    bottom: 0;
+}
+
+
+.newsandarticles{
+    color: #916F99;
+
+}
+
+.newsandarticleshr
+{    color: #916F99;
+    border-width: 5px;
+
+}
+.location{
+    color: #916F99;
+
+}
+
+.locationhr
+{    color: #916F99;
+    border-width: 5px;
+
+}
+
+.media{
+    color: #916F99;
+
+}
+
+.mediahr
+{    color: #916F99;
+    border-width: 5px;
+
+}
+
+
+
+@media  (max-width:800px)  {
+    .socialmediaicons{
+
+        display:none;
+    }
+
+    .carousel-caption5 {
+        position: absolute;
+        right: 4%;
+        bottom: 4.25rem;
+        left: 1%;
+        padding-top: 3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        width: 91%;
+                height: 40%;
+        color: #ffffff;
+        background-color: #916f99a5;
+        
+        text-align: center;
+        overflow: scroll;
+    
+      }
+
+      .googlemap{
+        width:23em;
+        height:23em;      }
+
+
+        .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:40px;
+            right:40px;
+            background-color:#25d366;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+          font-size:30px;
+            box-shadow: 2px 2px 3px #999;
+          z-index:100;
+        }
+
+    
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+.msngfloat{
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:117px;
+	background-color:#0695FF;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+
+}
+
+.messengerfloat {
+
+    line-height: 2;
+}
+  
+
+.vertical.carousel .carousel-indicators {
+    top: -450px;
+    left: unset;
+    margin-left: unset !important;
+    margin-right: 1rem;
+    flex-direction: column;
+    
+}
+
+.cardbtnmodal{
+
+    background-color: #916F99;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardbtnmodal:hover{
+
+    background-color:#3F6DA2;
+}
+
+.aboutuscardimg{
+    width: 30rem;
+}
+.aboutusimgmedia{
+    width: 30rem;
+}
+
+.aboutusimg{
+    width: 25rem;
+}
+@media  (max-width:600px)
+{
+    .aboutuscardimg{
+        width: 20rem;
+
+        position: relative;
+        left: -8%;
+    }
+.aboutusimgmedia{
+    width: 20rem;
+    position: relative;
+}
+.aboutusimg{
+    width: 20rem;
+}
+}
+
+
+
+
+

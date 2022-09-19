@@ -1,0 +1,191 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+  }
+.logonav{
+width: 150px;
+}
+
+.navbar{
+background-color: #DDDBDE;
+}
+
+.navbaritems
+{   
+color: #916F99;
+margin-top: 10px;
+font-size: x-large;
+}
+
+
+.navbaritems:hover
+{
+color: #3F6DA2;
+}
+
+.navbaritems:active {
+color: #3F6DA2 !important;
+}
+
+
+.navicon
+{
+    color: #916F99;
+    font-size: x-large;
+
+}
+
+.navicondiv{
+
+}
+
+.card
+{
+    margin: 50px;
+    color: #916F99;
+
+}
+
+
+.cardimg{
+    height: 70%;
+    width: 50%;
+    object-fit: contain;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.checkup{
+    color: #3F6DA2;
+
+}
+
+footer{
+    background-color: #DDDBDE;
+   
+}
+
+.logofooter{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footertext{
+    color: #916F99;
+
+}
+
+
+.footericon{
+
+    font-size: xx-large;
+    color: #916F99;
+
+}
+
+.carousel .item {
+    height: 500px;
+  }
+  
+  .item img {
+      position: absolute;
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+  }
+  
+.carousel-caption5 {
+    position: absolute;
+    right: 4%;
+    bottom: 14.25rem;
+    left: 9%;
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+
+    color: #ffffff;
+    background-color: #916f99a5;
+    
+    text-align: center;
+
+  }
+  
+  .caption-text{
+    position: relative;
+    bottom: 2rem;
+
+  }
+
+  .vertical.carousel .carousel-item {
+    overflow: hidden;
+}
+
+.vertical.carousel .carousel-item-next:not(.carousel-item-start),
+.vertical.carousel .active.carousel-item-end {
+    transform: translateY(100%);
+}
+
+.vertical.carousel .carousel-item-prev:not(.carousel-item-end),
+.vertical.carousel .active.carousel-item-start {
+    transform: translateY(-100%);
+}
+
+.vertical.carousel .carousel-indicators {
+    top: 0;
+    left: unset;
+
+    margin-left: unset !important;
+    margin-right: 1rem;
+
+    flex-direction: column;
+}
+
+.vertical.carousel .carousel-indicators [data-bs-target] {
+    height: 30px;
+    width: 3px;
+}
+
+.vertical.carousel .carousel-control-prev,
+.vertical.carousel .carousel-control-next {
+    width: 100%;
+    height: 60px;
+}
+
+.vertical.carousel .carousel-control-prev-icon,
+.vertical.carousel .carousel-control-next-icon {
+    transform: rotateZ(90deg);
+}
+
+.vertical.carousel .carousel-control-next {
+    top: unset;
+    bottom: 0;
+}
+
+
+.newsandarticles{
+    color: #916F99;
+
+}
+
+.newsandarticleshr
+{    color: #916F99;
+    border-width: 5px;
+
+}
+.location{
+    color: #916F99;
+
+}
+
+.locationhr
+{    color: #916F99;
+    border-width: 5px;
+
+}

@@ -1,0 +1,174 @@
+
+{% extends 'index.html'%}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container-fluid p-lg-5  d-flex justify-content-lg-around   flex-wrap ">
+  {% if LANGUAGE_CODE == 'en' %}
+
+  {% for package in packages %}
+  <div class="card  " style="width: 18rem; ">
+    <div>
+
+      <img class="cardimg" src="{% static '/images/genomic lab final logo1 ( RGB ).png'%}" class="card-img-top" alt="...">
+    </div>
+    <div class="card-body">
+      <h3 class="text-center">{{package.package_name}}  <span class="checkup text-center">Checkup</span></h3>
+      <p>
+
+         
+        <!-- Button trigger modal -->
+        <div class="container d-flex justify-content-center">
+
+          <div >
+            
+            <a class=" cardbtnmodal rounded-3 p-2 text-light text-decoration-none btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#readcard2{{package.id}}" >            
+              More Details </a>
+              
+            </div>
+            
+          </div>
+
+
+            <div class="modal fade" id="readcard2{{package.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"> {{package.package_name}} </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <ul class="list-group-horizontal row ">
+                    
+                      {% for detail in package.details_as_list %}
+                      <li class=" list-group-item col-sm-6 "> {{ detail }}</li>
+                      
+                      {% endfor %}
+                    </ul>
+        
+                    <img src="{{package.image.url}}" class=" w-100" alt="...">
+
+                  </div>
+                  <div class="modal-footer d-flex justify-content-between">
+                        <div>
+                          <p> Contact us now</p>
+
+                          <p class="footertext" > <i class="bi bi-telephone-fill me-3"></i>
+                            <a class="text-decoration-none footertext" href="tel:064008829" target="_blank">  06 400 88 29    </a> /   
+                            <a class="text-decoration-none footertext" href="tel:0790024535" target="_blank">   07900 24 535 </a>  </p> </li>
+                              <p class="footertext" ><i class="bi bi-whatsapp me-3"></i> <a class="text-decoration-none footertext" href="https://wa.me/0790024535" target="_blank">07900 24 535 </a> </p>
+                          
+                            </div>
+<div>
+
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+        </p>
+     
+      
+    </div>
+  </div>
+
+
+
+
+    
+  {% endfor %}
+
+  {%else %}
+
+
+  {% for package in packages %}
+  <div class="card  " style="width: 18rem; ">
+    <div>
+
+      <img class="cardimg" src="{% static '/images/genomic lab final logo1 ( RGB ).png'%}" class="card-img-top" alt="...">
+    </div>
+    <div class="card-body">
+      <h3 class="text-center">  <span class="checkup text-center">باقة</span> {{package.package_name_ar}}</h3>
+      <p>
+
+         
+        <!-- Button trigger modal -->
+        <div class="container d-flex justify-content-center">
+
+          <div >
+            
+            <a class=" cardbtnmodal rounded-3 p-2 text-light text-decoration-none btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#readcard2{{package.id}}" >            
+              لمعرفة التفاصيل </a>
+              
+            </div>
+            
+          </div>
+
+
+            <div class="modal fade" id="readcard2{{package.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header  ">
+                    <h5 class="modal-title text-end " id="staticBackdropLabel"> {{package.package_name_ar}} </h5>
+                  </div>
+                  <div class="modal-body ">
+
+                    
+                     
+                      <p class="text-end"> {{ package.details_ar }}</p>
+                      
+                     
+        
+                    <img src="{{package.image.url}}" class=" w-100" alt="...">
+
+                  </div>
+                  <div class="modal-footer d-flex justify-content-between">
+                    <div>
+
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    </div>
+
+                    <div>
+                          
+
+                          <h5 class="d-flex justify-content-end me-3"> تواصل معنا</h5>
+
+                          <p class="footertext" > <i class="bi bi-telephone-fill me-3"></i>
+                            <a class="text-decoration-none footertext" href="tel:064008829" target="_blank">  06 400 88 29    </a> /   
+                            <a class="text-decoration-none footertext" href="tel:0790024535" target="_blank">   07900 24 535 </a>  </p> </li>
+                              <p class="footertext" ><i class="bi bi-whatsapp me-3"></i> <a class="text-decoration-none footertext" href="https://wa.me/0790024535" target="_blank">07900 24 535 </a> </p>
+                          
+                            </div>
+
+                  </div>
+                </div>
+              </div>
+            </div> 
+        </p>
+     
+      
+    </div>
+  </div>
+
+
+
+
+    
+  {% endfor %}
+  
+  {%endif%}
+</div>
+
+
+
+
+{% endblock %}
+
+
+
+
+

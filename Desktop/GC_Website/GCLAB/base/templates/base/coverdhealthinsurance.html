@@ -1,0 +1,66 @@
+{% load static %}
+
+<div class="container">
+
+    
+    {% if LANGUAGE_CODE == 'en' %}
+
+    <h1 class="mt-5 newsandarticles"> Coverd Health Insurance </h1>
+    <hr class="newsandarticleshr" >
+
+    <div class="container">
+      <ul class="cards ">
+  {% for health in healthinsurance %}
+        <li class="card "">
+          <div>
+            <h3 class="card-title text-center ">{{health.hi_name}} </h3>
+            <div class="card-content "  style="height: 18rem;" >
+            
+                <img class="cardimghomehealthinsurance" src="{{health.hi_logo.url}}" class="card-img-top" alt="...">
+
+          </div>
+         
+            
+
+
+        </li>
+
+{% endfor %}
+
+
+      </ul>
+    </div>
+
+    {%else%}
+
+
+
+    <h1 class="mt-5 newsandarticles d-flex justify-content-end">  التأمين</h1>
+    <hr class="newsandarticleshr" >
+
+    <div class="container">
+      <ul class="cards ">
+        {% for health in healthinsurance %}
+        <li class="card "">
+          <div>
+            <h3 class="card-title text-center ">{{health.hi_nameAR}} </h3>
+            <div class="card-content "  style="height: 18rem;" >
+            
+                <img class="cardimghomehealthinsurance" src="{{health.hi_logo.url}}"    class="card-img-top" alt="...">
+
+          </div>
+         
+            
+
+
+        </li>
+
+{% endfor %}
+      </ul>
+    </div>
+
+    {% endif %}
+
+
+
+  </div>

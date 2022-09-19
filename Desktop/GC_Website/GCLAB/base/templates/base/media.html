@@ -1,0 +1,27 @@
+
+
+{% block content%}
+
+
+<div class="container" >
+  {% if LANGUAGE_CODE == 'en' %}
+
+  <h1 class="mt-5 media"> Media</h1>
+
+  {%else%}
+  <h1 class="mt-5 media d-flex justify-content-end footertext"> الصور و الفيديوهات</h1>
+
+  {%endif%}
+    <hr class="mediahr" >
+<div class="container d-lg-flex justify-content-lg-center flex-sm-wrap" >
+ {% for media in medias %}
+    <div class="card aboutuscardimg " >
+        <img class="aboutusimgmedia" src="{{media.media_img.url}}" class="card-img-top p-1" alt="...">
+      </div>
+
+{% endfor  %}
+  </div>
+</div>
+
+  {% endblock %}
+  

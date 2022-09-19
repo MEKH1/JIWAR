@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content%}
+
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/sidebar.css' %}">
+{% endblock %}
+
+
+<div class="container-fluid d-flex justify-content-between">
+
+    {% include 'base/sidebar.html' %}
+
+  
+    {% if LANGUAGE_CODE == 'en' %}
+
+<div class="content footertext m-5 ">
+  <h1> {{articles.article_label}} </h1>
+  <p>
+
+    {{articles.article_content}} 
+  </p>
+
+</div>
+
+{%else%}
+
+<div class="content footertext m-5 ">
+  <h1> {{articles.article_label_ar}} </h1>
+  <p>
+
+    {{articles.article_content_ar}} 
+  </p>
+
+</div>
+
+{%endif%}
+</div>
+
+
+  
+
+{% endblock %}

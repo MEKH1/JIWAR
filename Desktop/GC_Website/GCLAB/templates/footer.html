@@ -1,0 +1,193 @@
+<!-- {% load static %} -->
+{% load i18n %}
+
+
+
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class=" my-5">
+
+  {% if LANGUAGE_CODE == 'en' %}
+
+  <footer class="footer text-center ">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row my-4">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+          <div class="rounded-circle  shadow-1-strong d-flex align-items-center justify-content-center  mx-auto" style="width: 150px; height: 150px;">
+            <img      class="logofooter"
+            src="{%static '/images/genomic lab final logo.png' %}"  alt=""
+                 loading="lazy" />        
+          </div>
+
+          <p class="footertext">Genomic Core Lab distinguished by the latest equipment and the most accurate results,
+            Under the supervision of American Board certified laboratories doctors
+
+          </p>
+
+          <ul class="list-unstyled d-flex flex-row justify-content-center">
+          
+          <li class="nav-item navicondiv ">
+              <a class="navbar-link pe-lg-3 px-2" href="https://wa.me/0790024535" target="_blank"> <i class=" bi bi-whatsapp navicon"> </i> </a>
+          </li>
+          
+          <li class="nav-item  navicondiv">
+              <a class="navbar-link pe-lg-3 px-2" href="https://www.facebook.com/gclab.jo"  target="_blank">  <i class=" bi bi-facebook navicon"> </i> </a>
+          </li>
+          
+          <li class="nav-item navicondiv">
+              <a class="navbar-link ps-2" href="https://www.instagram.com/gclab.jo/" target="_blank"> <i class=" bi bi-instagram navicon"> </i> </a>
+          </li>
+          
+          
+          </ul>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+          <h5 class="footertext text-uppercase mb-4 "> <span>         <i class="bi bi-geo-alt-fill  footericon  me-2"></i> </span> Location</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <p class="footertext">  Al-Sakhaa Complex no.21 - Ground Floor <br>
+                Abu Feras Al Hamadani St.,- Jabal Amman <br>
+                Amman, Jordan  
+               
+           </p>              </li>
+           
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase footertext mb-4">Contact</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p class="footertext" ><i class="bi bi-envelope-fill me-3"></i> <a  class="text-decoration-none footertext" href="mailto: info@GC-lab.co" target="_blank">info@GC-lab.co</a> </p>
+            </li>
+            <li>
+              <p class="footertext" > <i class="bi bi-telephone-fill me-3"></i>
+              <a class="text-decoration-none footertext" href="tel:064008829" target="_blank">  06 400 88 29    </a> /   
+              <a class="text-decoration-none footertext" href="tel:0790024535" target="_blank">   07900 24 535 </a>  </p> </li>
+            <li>
+              <p class="footertext" ><i class="bi bi-whatsapp me-3"></i> <a class="text-decoration-none footertext" href="https://wa.me/0790024535" target="_blank">07900 24 535 </a> </p>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color:#e5e5e5">
+      <span class="footertext"> © 2022 Copyright:</span> 
+      <a class="footertext text-decoration-none" >GCLAB.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+  {% else %}
+
+
+  <footer class="footer text-center ">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row my-4">
+        <!--Grid column-->
+        
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase footertext mb-4">تواصل معنا</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p class="footertext" ><i class="bi bi-envelope-fill me-3"></i> <a  class="text-decoration-none footertext" href="mailto: info@GC-lab.co" target="_blank">info@GC-lab.co</a> </p>
+            </li>
+            <li>
+              <p class="footertext" > <i class="bi bi-telephone-fill me-3"></i>
+              <a class="text-decoration-none footertext" href="tel:064008829" target="_blank">  06 400 88 29    </a> /   
+              <a class="text-decoration-none footertext" href="tel:0790024535" target="_blank">   07900 24 535 </a>  </p> </li>
+            <li>
+              <p class="footertext" ><i class="bi bi-whatsapp me-3"></i> <a class="text-decoration-none footertext" href="https://wa.me/0790024535" target="_blank">07900 24 535 </a> </p>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+          <h5 class="footertext text-uppercase mb-4 "> <span>         <i class="bi bi-geo-alt-fill  footericon  me-2"></i> </span> الموقع</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <p class="footertext">  مجمع السخاء الطبي رقم ٢١ - الطابق الأرضي <br>
+                جبل عمان - شارع ابو فراس الحمداني <br>
+                عمان, الأردن 
+               
+           </p>              </li>
+           
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+          <div class="rounded-circle  shadow-1-strong d-flex align-items-center justify-content-center  mx-auto" style="width: 150px; height: 150px;">
+            <img      class="logofooter"
+            src="{%static '/images/genomic lab final logo.png' %}"  alt=""
+                 loading="lazy" />        
+          </div>
+
+          <p class="footertext">يتميز مختبر جينوميك كور بأحدث الأجهزة وأدق النتائج ، تحت إشراف أطباء المعامل المعتمدين من البورد الأمريكي</p>
+
+          <ul class="list-unstyled d-flex flex-row justify-content-center">
+          
+          <li class="nav-item navicondiv ">
+              <a class="navbar-link pe-lg-3 px-2" href="https://wa.me/0790024535" target="_blank"> <i class=" bi bi-whatsapp navicon"> </i> </a>
+          </li>
+          
+          <li class="nav-item  navicondiv">
+              <a class="navbar-link pe-lg-3 px-2" href="https://www.facebook.com/gclab.jo"  target="_blank">  <i class=" bi bi-facebook navicon"> </i> </a>
+          </li>
+          
+          <li class="nav-item navicondiv">
+              <a class="navbar-link ps-2" href="https://www.instagram.com/gclab.jo/" target="_blank"> <i class=" bi bi-instagram navicon"> </i> </a>
+          </li>
+          
+          
+          </ul>
+
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color:#e5e5e5">
+      <span class="footertext"> © 2022 Copyright:</span> 
+      <a class="footertext text-decoration-none" >GCLAB.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  {% endif%}
+
+</div>
+<!-- End of .container -->

@@ -1,0 +1,68 @@
+<div class="container">
+    
+    {% if LANGUAGE_CODE == 'en' %}
+
+    <h1 class="mt-5 newsandarticles"> News and Articles</h1>
+    <hr class="newsandarticleshr" >
+
+    <div class="container">
+      <ul class="cards ">
+{% for article in articles%}
+        <li class="card "">
+          <div>
+            <h3 class="card-title text-center">{{article.article_label}}</h3>
+
+            <div class="container d-flex justify-content-center">
+            <div class="card-content overflow-scroll"  style="height: 15em;" >
+              <p>{{article.article_content}}</p>
+            </div>
+          </div>
+
+          </div>
+
+
+          <div class="container d-flex justify-content-center">
+
+          <div class="card-link-wrapper ">
+            <a href="{% url 'Articles' article.id %}" class="card-link">Learn More</a>
+          </div>
+        </div>
+
+        </li>
+{% endfor %}
+
+      </ul>
+    </div>
+
+    {%else%}
+
+
+
+    <h1 class="mt-5 newsandarticles d-flex justify-content-end "> أخبار ومقالات</h1>
+    <hr class="newsandarticleshr" >
+
+    <div class="container">
+      <ul class="cards ">
+{% for article in articles%}
+        <li class="card "">
+          <div>
+            <h3 class="card-title">{{article.article_label_ar}}</h3>
+            <div class="card-content overflow-scroll"  style="height: 15em
+            ;" >
+              <p>{{article.article_content_ar}}</p>
+            </div>
+          </div>
+          <div class="card-link-wrapper">
+            <a href="{% url 'Articles' article.id %}" class="card-link">لمعرفة المزيد</a>
+          </div>
+        </li>
+{% endfor %}
+
+      </ul>
+    </div>
+
+    {% endif %}
+
+
+
+  </div>

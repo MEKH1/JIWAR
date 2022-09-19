@@ -1,0 +1,72 @@
+<div class="container" id="Career" >
+    {% if LANGUAGE_CODE == 'en' %}
+    <h1 class="mt-5 media"> Career</h1>
+
+    {%else%}
+    <h1 class="mt-5 media d-flex justify-content-end"> فرص العمل و التدريب</h1>
+
+    {%endif%}
+    <hr class="mediahr" >
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    {% if LANGUAGE_CODE == 'en' %}
+    <div class="row">
+
+    <div class="col-6 mb-3">
+        <label for="exampleFormControlInput1" class="form-label footertext fw-bold">Email Address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" name="Email-Address" placeholder="name@example.com">
+      </div>
+      <div class=" col-6 mb-3">
+        <label for="exampleInputName" class="form-label footertext fw-bold">Your Full Name</label>
+        <input type="text" class="form-control" id="exampleInputName" name="Full-name">
+      </div>
+    </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label footertext fw-bold">Your Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+      </div>      
+  
+    <div class="input-group mb-3">
+        <label for="exampleFormControlCV" class="input-group-text " for="form-label ">Upload Your CV</label>
+        <input type="file" class="form-control" id="exampleFormControlCV" name="attachted-cv">
+      </div>
+
+
+    <div class="d-flex justify-content-center">
+    <button type="submit" class="cardbtnmodal w-100 pt-4 pb-4 rounded-3 p-2 text-light border-0 ">Send Email</button>
+    </div>
+
+    {%else%}
+    <div class="row">
+
+        <div class="col-6 mb-3">
+            <label for="exampleFormControlInput1" class="form-label footertext fw-bold d-flex justify-content-end">عنوان البريد الالكترونى</label>
+            <input type="email" class="form-control " id="exampleFormControlInput1" name="Email-Address" >
+          </div>
+          <div class=" col-6 mb-3">
+            <label for="exampleInputName" class="form-label footertext fw-bold d-flex justify-content-end">الاسم الكامل</label>
+            <input type="text" class="form-control " id="exampleInputName" name="Full-name">
+          </div>
+        </div>
+    
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label footertext fw-bold d-flex justify-content-end">الرسالة</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+          </div>      
+      
+        <div class="input-group mb-3">
+            <label for="exampleFormControlCV" class="input-group-text d-flex justify-content-end" for="form-label ">حمل سيرتك الذاتية</label>
+            <input type="file" class="form-control" id="exampleFormControlCV" name="attachted-cv">
+          </div>
+    
+    
+        <div class="d-flex justify-content-center">
+        <button type="submit" class="cardbtnmodal w-100 pt-4 pb-4 rounded-3 p-2 text-light border-0 ">ارسال</button>
+        </div>
+    {%endif%}
+</form>
+
+  </div>

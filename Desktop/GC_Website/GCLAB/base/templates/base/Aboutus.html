@@ -1,0 +1,108 @@
+{% extends 'index.html' %}
+{% load static %} 
+
+{% block content %}
+
+  <div class="container-fluid p-0">
+    {% if LANGUAGE_CODE == 'en' %}
+
+<div class="container">
+  <h1 class="mt-5 media"> Mission</h1>
+  <hr class="mediahr" >
+  <div class="container d-lg-flex justify-content-lg-between ">
+    
+    
+    <div class="mt-3">
+      <img class="aboutusimg" src="{%static '/images/genomic lab final logo.png' %}"   alt="">
+    </div> 
+    
+    <div class="ms-5 mt-5 pt-5 align-self-center footertext fs-5 ">
+<p>  Medical lab offers best practices, standards and services.
+  <br>
+  <span>
+    Quality, timely results, and ethics are our main priorities.
+  </span> 
+      </p>
+    </div>
+    
+  </div>
+
+
+  <h1 class="mt-5 media"> Vision </h1>
+  <hr class="mediahr" >
+  <div class="container d-lg-flex justify-content-lg-between ">
+    
+    
+  
+    
+    <div class="ms-5 mt-5 pt-5 align-self-center footertext fs-5 ">
+<p> a state of art lab group reserves unique and distinguished place nationally and beyond providing best available medical services.      </p>
+    </div>
+    <div >
+      <img class="aboutusimg" src="{%static '/images/Vision.png' %}"   alt="">
+    </div> 
+  </div>
+
+
+    </div>
+
+    {%else%}
+    <div class="container">
+      <h1 class="mt-5 media  d-flex justify-content-end"> المهام</h1>
+      <hr class="mediahr" >
+      <div class="container d-lg-flex justify-content-lg-between ">
+        
+        
+        <div class="mt-3">
+          <img class="aboutusimg" src="{%static '/images/genomic lab final logo.png' %}"   alt="">
+        </div> 
+        
+        <div class="ms-5 mt-5 pt-5 align-self-center footertext fs-5 ">
+    <p class="text-end">  يقدم المختبر الطبي أفضل المعايير والخدمات
+      <br>
+      <span class="text-end">  الجودة والنتائج في الوقت المناسب والأخلاق هي أولوياتنا الرئيسية
+      </span>
+          </p>
+        
+        </div>
+        
+      </div>
+    
+    
+      <h1 class="mt-5 media d-flex justify-content-end"> الرؤيا </h1>
+      <hr class="mediahr" >
+      <div class="container d-lg-flex justify-content-lg-between ">
+        
+        
+      
+        
+        <div class="ms-5 mt-5 pt-5 align-self-center footertext fs-5   ">
+    <p class="text-end"> تحتفظ مجموعة المختبرات الحديثة بمكانة فريدة من نوعها ومتميزة على المستوى الوطني وخارجه ، مما يوفر أفضل الخدمات الطبية المتاحة</p>
+        </div>
+        <div >
+          <img class="aboutusimg" src="{%static '/images/Vision.png' %}"   alt="">
+        </div> 
+      </div>
+    
+    
+        </div>
+
+    {%endif%}
+
+
+
+
+
+
+
+{% include 'base/media.html' %}
+    
+  {%include 'base/sendemail.html'%}
+
+  </div>
+
+
+
+  
+
+{% endblock %}

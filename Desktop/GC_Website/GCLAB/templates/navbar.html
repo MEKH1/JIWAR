@@ -1,0 +1,146 @@
+<!-- {% load static %} -->
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid d-flex justify-content-md-between">
+
+    <div>
+
+
+      <a class="navbar-link" href="#">
+        <img
+          class="logonav"
+          src="{%static '/images/genomic lab final logo.png' %}"
+          alt=""
+          /></a>
+          
+
+
+
+
+         
+        </div>
+        
+       
+
+        
+        
+        
+        <div class="ps-lg-3">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <ul class="navbar-nav">
+
+            {% if LANGUAGE_CODE == 'en' %}
+    
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home'%}">
+                <p class="navbaritems">Home</p></a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}#Location "><p class="navbaritems">Location</p></a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Services' %}"> <p class="navbaritems">Services</p></a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Aboutus' %}#Career"> <p class="navbaritems">Career</p></a>
+
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Aboutus'%}">
+                <p class="navbaritems">About us</p></a
+              >
+            </li>
+            
+
+
+            {% else %}
+
+           
+    
+    
+          
+          
+    
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Aboutus'%}">
+                <p class="navbaritems">من نحن</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}#Location "><p class="navbaritems">الموقع</p></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Services' %}"> <p class="navbaritems">الخدمات</p></a>
+            </li>
+
+
+
+          
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Aboutus' %}#Career"> <p class="navbaritems">فرص العمل</p></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home'%}">
+                <p class="navbaritems">الصفحة الرئيسية</p></a>
+            </li>
+
+           
+    
+
+            {% endif %}
+      </ul>
+      
+      
+    </div>
+    </div>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="socialmediaicons">
+
+
+
+      <ul class="nav ">
+        <li class="nav-item navicondiv ">
+
+{% include 'lang.html'%}
+        </li>
+        
+        <li class="nav-item navicondiv ">
+            <a class="navbar-link pe-3" href="https://wa.me/0790024535" target="_blank"> <i class=" bi bi-whatsapp navicon"> </i> </a>
+        </li>
+        
+        <li class="nav-item  navicondiv">
+            <a class="navbar-link pe-3" href="https://www.facebook.com/gclab.jo"  target="_blank">  <i class=" bi bi-facebook navicon"> </i> </a>
+        </li>
+        
+        <li class="nav-item navicondiv">
+            <a class="navbar-link" href="https://www.instagram.com/gclab.jo/" target="_blank"> <i class=" bi bi-instagram navicon"> </i> </a>
+        </li>
+        
+        
+    </ul>
+
+   
+    
+</div>
+
+
+</div>
+
+
+
+</nav>
+

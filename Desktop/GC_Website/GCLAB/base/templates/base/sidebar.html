@@ -1,0 +1,24 @@
+
+<div class="vertical-menu ">
+    {% if LANGUAGE_CODE == 'en' %}
+
+    <a><h4 class=" newsandarticles"> News And Articles</h4>
+    </a>
+
+    {% for article in articlesside reversed%}
+    <a href="{% url 'Articles' article.id %}">{{article.article_label}}</a>
+ {%endfor%}
+
+
+ {%else%}
+
+ <a><h4 class=" newsandarticles"> أخبار ومقالات</h4>
+ </a>
+
+ {% for article in articlesside reversed%}
+ <a href="{% url 'Articles' article.id %}">{{article.article_label_ar}}</a>
+{%endfor%}
+
+
+ {%endif%}
+  </div>

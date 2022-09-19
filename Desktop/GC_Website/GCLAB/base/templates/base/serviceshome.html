@@ -1,0 +1,163 @@
+{% load static %}
+
+<div class="container">
+
+    
+    {% if LANGUAGE_CODE == 'en' %}
+
+    <h1 class="mt-5 newsandarticles"> Services </h1>
+    <hr class="newsandarticleshr" >
+
+    <div class="container">
+      <ul class="cards ">
+  {% for package in packages %}
+        <li class="card "">
+          <div>
+            <h3 class="card-title text-center">{{package.package_name}} <span class="checkup text-center">Checkup</span></h3>
+            <div class="card-content "  style="height: 18rem;" >
+            
+                <img class="cardimghome" src="{% static '/images/genomic lab final logo1 ( RGB ).png'%}" class="card-img-top" alt="...">
+    </div>
+          </div>
+          <div class="container d-flex justify-content-center">
+
+            <div >
+              
+              <a class="card-link cardbtnmodal rounded-3 p-2 text-light text-decoration-none btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#readcard2{{package.id}}" >            
+                More Details </a>
+                
+              </div>
+              
+            </div>
+
+            
+
+
+        </li>
+
+        <div class="modal fade" id="readcard2{{package.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title footertext" id="staticBackdropLabel" > {{package.package_name}} </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body footertext">
+
+                <ul class="list-group-horizontal row ">
+                
+                  {% for detail in package.details_as_list %}
+                  <li class=" list-group-item col-sm-6 " > {{ detail }}</li>
+                  
+                  {% endfor %}
+                </ul>
+    
+                <img src="{{package.image.url}}" class=" w-100" alt="...">
+
+              </div>
+              <div class="modal-footer d-flex justify-content-between">
+                    <div>
+                      <p class="footertext">Contact us now</p>
+
+                      <p class="footertext" > <i class="bi bi-telephone-fill me-3"></i>
+                        <a class="text-decoration-none footertext" href="tel:064008829" target="_blank">  06 400 88 29    </a> /   
+                        <a class="text-decoration-none footertext" href="tel:0790024535" target="_blank">   07900 24 535 </a>  </p> </li>
+                          <p class="footertext" ><i class="bi bi-whatsapp me-3"></i> <a class="text-decoration-none footertext" href="https://wa.me/0790024535" target="_blank">07900 24 535 </a> </p>
+                      
+                        </div>
+<div>
+
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+              </div>
+            </div>
+          </div>
+        </div> 
+{% endfor %}
+
+
+      </ul>
+    </div>
+
+    {%else%}
+
+
+
+    <h1 class="mt-5 newsandarticles d-flex justify-content-end "> خدمات</h1>
+    <hr class="newsandarticleshr" >
+
+    <div class="container">
+      <ul class="cards ">
+  {% for package in packages %}
+        <li class="card "">
+          <div>
+            <h3 class="text-center">  <span class="checkup text-center">باقة</span> {{package.package_name_ar}}</h3>
+            <div class="card-content "  style="height: 18rem;" >
+            
+                <img class="cardimghome" src="{% static '/images/genomic lab final logo1 ( RGB ).png'%}" class="card-img-top" alt="...">
+    </div>
+          </div>
+          <div class="container d-flex justify-content-center">
+
+            <div >
+              
+              <a class=" cardbtnmodal rounded-3 p-2 text-light text-decoration-none btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#readcard2{{package.id}}" >            
+                لمعرفة التفاصيل </a>
+                
+              </div>
+              
+            </div>
+
+            
+
+
+        </li>
+
+        <div class="modal fade" id="readcard2{{package.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title footertext" id="staticBackdropLabel" > {{package.package_name_ar}} </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body footertext">
+
+                <p class="text-end"> {{ package.details_ar }}</p>
+
+    
+                <img src="{{package.image.url}}" class=" w-100" alt="...">
+
+              </div>
+              <div class="modal-footer d-flex justify-content-between">
+                <div>
+
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+
+                <div>
+                      
+
+                      <h5 class="d-flex justify-content-end me-3 footertext"> تواصل معنا</h5>
+
+                      <p class="footertext" > <i class="bi bi-telephone-fill me-3"></i>
+                        <a class="text-decoration-none footertext" href="tel:064008829" target="_blank">  06 400 88 29    </a> /   
+                        <a class="text-decoration-none footertext" href="tel:0790024535" target="_blank">   07900 24 535 </a>  </p> </li>
+                          <p class="footertext" ><i class="bi bi-whatsapp me-3"></i> <a class="text-decoration-none footertext" href="https://wa.me/0790024535" target="_blank">07900 24 535 </a> </p>
+                      
+                        </div>
+
+              </div>
+            </div>
+          </div>
+        </div> 
+{% endfor %}
+
+
+      </ul>
+    </div>
+
+    {% endif %}
+
+
+
+  </div>
